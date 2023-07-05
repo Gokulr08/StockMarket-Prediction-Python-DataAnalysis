@@ -1,155 +1,42 @@
-# Mini-Project--Regression-Prediction-of-stock-analysis
+<div align="center">
+  <img src="https://your-image-url.com/your-image.gif" alt="Project Logo" width="200" height="200">
+</div>
 
-## Group Members Name
-* Gokul.R
-* Hari Shanker.V
-* Kabileshwaran.V
-* Mohamed Mustafa.J
+# StockMarket-Prediction-Python-DataAnalysis 📈
 
-## About project
+🚀 StockMarket-Prediction-Python-DataAnalysis is a Python project that leverages data analysis techniques to predict stock market trends. By analyzing historical stock data using powerful libraries like NumPy, Pandas, and Matplotlib, this project aims to forecast future stock prices and provide valuable insights for investors.
 
-What is Linear Regression?
+## 📚 Dataset Explanation
 
-Linear Regression is an approach for modelling the
-relationship between sealar dependent variable y and one or more explanatory
-variables (or independent variables) denoted X.
+The dataset chosen for this project includes the following attributes:
 
-#### Dataset explanation which as chose
+1. Date: The date of the stock market data.
+2. Open: The opening price of the stock.
+3. High: The highest price of the stock for that day.
+4. Low: The lowest price of the stock for that day.
+5. Close: The closing price of the stock for that day.
+6. Volume: The amount of stocks traded during that day.
+7. Adj[usted] Close: The adjusted closing price of the stock, considering distributions/corporate actions before the next day's open.
 
-1.The date - "Date"
+## ⚙️ Installation and Setup
 
-2.The opening price of the stock - "Open"
+1. Clone this repository to your local machine.
+2. Install the required dependencies using `pip install -r requirements.txt`.
+3. Run the Python scripts to analyze the stock market data and predict future prices.
+4. Customize the analysis and models as per your requirements.
+5. Explore the generated visualizations and insights.
 
-3.The high price of that day - "High"
+## 📊 Usage and Results
 
-4.The low price of that day - "Low"
-
-5.The closed price of that day - "Close"
-
-6.The amount of stocks traded during that day - "Volume"
-
-7.The stock's closing price that has been amended to include any distributions/corporate actions that occurs before next days open - "Adj[usted] Close"
-
-## Performance metrics
-
-####  1.Mean Absolute Error (MAE)
-
-It is the simplest error metric used in regression problems. It is basically the sum of average of the absolute difference between the predicted and actual values.
-In simple words, with MAE, we can get an idea of how wrong the predictions were. MAE does not indicate the direction of the model i.e. no indication about 
-underperformance or overperformance of the model.
-
-#### 2.Mean Square Error (MSE)
-
-MSE is like the MAE, but the only difference is that the it squares the difference of actual and predicted output values before summing them all instead of 
-using the absolute value.
-
-#### 3.R Squared (R2)
-
-R Squared metric is generally used for explanatory purpose and provides an indication of the goodness
-or fit of a set of predicted output values to the actual output values.
-
-## Python code Explanation
-
-import libraries
-```
-import numpy as np
-import pandas as pd
-```
-
-import matpotlib.pyplot as plt fot visualize the data
-```
-import matplotlib.pyplot as plt
-%matplotlib inline
-```
-
-import the dataset which has .csv format
-```
-data=pd.read_csv("C:/Users/GOKUL/Downloads/Tesla.csv - Tesla.csv.csv")
-```
-
-If we want to Know the shape of data use data.shape
-```
-data.shape
-```
-
-use data.head() to display the five rows of data
-```
-data.head()
-```
-
-dada.info() is used for know the datatype and memory usage
-```
-data.info()
-```
-
-I dropped Date and adj volume with the help of drop command
-```
-data.drop('Date',axis=1, inplace=True)
-```
-```
-data.drop('Adj Close',axis=1,inplace=True)
-```
-
-X denoted as open,low,high
-y denoted as close
-```
-x=data.iloc[:,0:3].values
-y=data.iloc[:,-2].values.reshape(-1,1)
-```
-
-from sklearn.model_selection import train_test_split
-```
-from sklearn.model_selection import train_test_split
-```
-```
-x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_state=0)
-```
-
-from sklearn.linear_model import LinearRegression
-```
-from sklearn.linear_model import LinearRegression
-```
-
-regr = LinearRegression()
-```
-regr = LinearRegression()
-```
-
-fit the x_train,y_train variable
-```
-regr.fit(x_train,y_train)
-```
-
-predict the x_test
-```
-regr.fit(x_train,y_train)
-```
-
-Create dataframe for actual price and new price
-```
-check = pd.DataFrame(y_test,columns=['Actual price'])
-```
-```
-check['Predicted price'] = predict
-```
-
-visualize the data using plt
-```
-plt.figure(figsize=(15,10))
-plt.scatter(y_test,predict)
-plt.xlabel('Actual price')
-plt.ylabel('Predicted price')
-plt.show()
-```
-
-performance the metrics  
-```
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-```
-```
-mean_squared_error(y_test,predict)
-mean_absolute_error(y_test,predict)
-r2_score(y_test,predict)
-```
+1. Provide the historical stock market data in the specified format.
+2. Apply various data analysis techniques using Python and the included libraries.
+3. Generate visualizations to gain insights into stock market trends.
+4. Utilize predictive models to forecast future stock prices.
+5. Evaluate the accuracy of the predictions and fine-tune the models.
 
 
+
+</br>
+<p align="center">
+  <img src="https://your-image-url.com/your-gif.gif" alt="GIF" width="500" height="300">
+</p>
